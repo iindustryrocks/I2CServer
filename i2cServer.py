@@ -2,6 +2,8 @@ import pigpio
 import time
 import os
 
+
+
 pi = None
 slave_addr = 0x04
 
@@ -13,9 +15,11 @@ def i2cInterrupt(id, tick):
     global slave_addr
     status, bytes_read, data = pi.bsc_i2c(slave_addr)  # pi.bsc_i2c(slave_addr, data=" ACK")
     if bytes_read:
-        if data == "OK":
-            print("Message:")
-            print(data[:-1])
+      print(data)
+      for byte in data:
+         print("this is a int: ")
+         print(byte - 48)
+         print(".........")
 
 
 pi = pigpio.pi()  # inicia a conexao

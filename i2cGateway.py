@@ -3,11 +3,11 @@ import time
 import os
 
 message_protocol = {
-    "0" : "Up",
-    "1" : "Down",
-    "2" : "Right",
-    "3" : "Left",
-    "4" : "Enter"
+    0 : "Up",
+    1 : "Down",
+    2 : "Right",
+    3 : "Left",
+    4 : "Enter"
 }
 
 pi = None

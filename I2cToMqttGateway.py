@@ -2,7 +2,7 @@ import python_i2c_estg as i2c
 import python_mqtt_estg as mqtt
 
 
-def message_handler(client, userdata, i2c_message):
+def message_handler(client, userdata, i2c_message, cenas):
     print(i2c_message)
     mqtt.publish(message=i2c_message)
 
